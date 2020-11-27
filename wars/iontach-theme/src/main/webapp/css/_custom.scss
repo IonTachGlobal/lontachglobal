@@ -1,0 +1,42 @@
+@import "theme_variables_custom";
+
+body{
+	color:$link-color;
+}
+
+#heading {
+	margin-bottom: 10px;
+	
+	.custom-logo img {
+		width: 140px;
+	    height: auto;
+	}
+}
+
+#navigation {
+	background-color: $iontach-primary;
+	margin-bottom: 5px;
+	
+	ul {
+		margin:0px;
+		padding:0px;
+		
+		li {
+			display: inline-block;
+			a {
+				color:$link-color;
+				padding: 6px 5px;
+				display: block;
+			}
+		}
+	}
+
+}
+
+#footer {
+	background-color: $footer-bg;
+	
+	a {
+		color:$link-color;
+	}
+}
