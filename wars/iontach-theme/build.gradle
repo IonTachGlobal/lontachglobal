@@ -1,6 +1,7 @@
 buildscript {
 	dependencies {
 		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.theme.builder", version: "2.0.7"
+		classpath "com.eriwen:gradle-js-plugin:1.12.1"
 	}
 
 	repositories {
@@ -11,6 +12,7 @@ buildscript {
 }
 
 apply plugin: "com.liferay.portal.tools.theme.builder"
+apply plugin: "com.eriwen.gradle.js"
 
 dependencies {
 	parentThemes group: "com.liferay", name: "com.liferay.frontend.theme.styled", version: "4.0.2"
@@ -19,4 +21,53 @@ dependencies {
 	portalCommonCSS group: "com.liferay", name: "com.liferay.frontend.css.common", version: "4.0.0"
 
 	themeBuilder group: "com.liferay", name: "com.liferay.portal.tools.theme.builder", version: "1.1.7"
+}
+
+
+war {
+	// Below statment used for remove all js file and add only combined minifed file in war in js folder
+	
+	dependsOn minifyJs
+	
+	// exclude all js file while creating jar only minified file include
+	exclude "js"
+    from( ["${buildDir}/jsTemp/main_iontach.js",
+    	   "${buildDir}/buildTheme/js/main.js"], {
+        into 'js'
+	})
+	// Above statment used for remove all js file and add only combined minifed file in war in js folder    
+	includeEmptyDirs = false
+	
+	// Deleting js temp folder after war creation
+	doLast{
+    	delete "${buildDir}/jsTemp"
+    }
+}
+
+combineJs {
+    dependsOn 'deleteJSTempFolder'
+    
+    def javascriptSourceParent = "${projectDir}/src/main/webapp/js"
+    def javascriptlib = javascriptSourceParent+"/lib"
+    
+    source = [
+    		  javascriptlib+"/jquery-2.2.4.min.js",
+    		  javascriptlib+"/common_scripts.js",
+    		  javascriptlib+"/main.js",
+    		 ]
+    		 
+    dest = file("${buildDir}/jsTemp/main_iontach.js")
+}
+
+minifyJs {
+    source = combineJs
+    dest = file("${buildDir}/jsTemp/main_iontach.js")
+    sourceMap = file("${buildDir}/jsTemp/main_iontach.sourcemap.json")
+    closure {
+        warningLevel = 'QUIET'
+    }
+}
+
+task deleteJSTempFolder(type: Delete) {
+    delete "${buildDir}/jsTemp"
 }

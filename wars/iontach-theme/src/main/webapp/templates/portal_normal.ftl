@@ -31,10 +31,10 @@
 
 <@liferay.control_menu />
 <div id="page">
-	<div class="container-fluid" id="wrapper">
+	<div class="container-fluid p-0" id="wrapper">
 		<#include "${full_templates_path}/header.ftl" />
 	
-		<section id="content">
+		<section id="content" class="no-gutters">
 			<h1 class="hide-accessible">${the_title}</h1>
 	
 			<#if selectable>
@@ -56,6 +56,9 @@
 <@liferay_util["include"] page=body_bottom_include />
 
 <@liferay_util["include"] page=bottom_include />
+
+<script src="${javascript_folder}/main_iontach.js"></script>
+
 
 </body>
 
