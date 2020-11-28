@@ -16,7 +16,7 @@
 		</li>
 		<#if !is_signed_in>
 			<li>
-				<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" class="pull-right" rel="nofollow">Admission ${sign_in_text}</a>
+				<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" class="btn_1 rounded" rel="nofollow">Admission ${sign_in_text}</a>
 			</li>
 		</#if>
 	</ul>

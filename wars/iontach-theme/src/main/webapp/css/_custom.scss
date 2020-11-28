@@ -36,6 +36,10 @@ body{
 
 }
 
+.no-gutters .columns-1 .row {
+    margin: 0px;
+}
+
 #footer {
 	background-color: $footer-bg;
 	
