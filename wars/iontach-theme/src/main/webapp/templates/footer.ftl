@@ -18,6 +18,10 @@
 			</div>
 			<div class="col-lg-3 col-md-6 ml-lg-auto">
 				<h5>Useful links</h5>
+				<@liferay.navigation_menu
+					default_preferences=freeMarkerPortletPreferences.getPreferences(mainfooterNavigation)
+					instance_id="useFulllinks"
+				/>
 				<ul class="links">
 					<li><a href="#0">Admission</a></li>
 					<li><a href="#0">About</a></li>
@@ -30,7 +34,7 @@
 			<div class="col-lg-3 col-md-6">
 				<h5>Contact with Us</h5>
 				<ul class="contacts">
-					<li><a href="tel://61280932400"><i class="ti-mobile"></i> + 61 23 8093 3400</a></li>
+					<li><a href="tel://61280932400"><i class="ti-mobile"></i>1800 425 0573</a></li>
 					<li><a href="mailto:info@iontachacademy.com"><i class="ti-email"></i> info@iontachacademy.com</a></li>
 				</ul>
 			</div>
@@ -39,13 +43,17 @@
 		<hr>
 		<div class="row">
 			<div class="col-md-8">
+				<@liferay.navigation_menu
+					default_preferences=freeMarkerPortletPreferences.getPreferences(mainfooterNavigation)
+					instance_id="additionalLinks"
+				/>
 				<ul id="additional_links">
 					<li><a href="#0">Terms and conditions</a></li>
 					<li><a href="#0">Privacy</a></li>
 				</ul>
 			</div>
 			<div class="col-md-4">
-				<div id="copy"><@liferay.language key="powered-by" /> © 2017 <a href="https://iontachacademy.com" rel="external">Iontach Global</a></div>
+				<div id="copy"><@liferay.language key="powered-by" /> 2020 <a href="https://iontachacademy.com" rel="external">Iontach Global</a></div>
 			</div>
 		</div>
 	</div>

@@ -7,7 +7,7 @@ body{
 	color:$link-color;
 }
 
-#heading {
+heading#banner {
 	margin-bottom: 10px;
 	
 	.custom-logo img {
@@ -36,6 +36,13 @@ body{
 
 }
 
+.NotOmniAdmin .portlet-header {
+	display:none;
+}
+
+.control-menu {
+	z-index: 99999;
+}
 .no-gutters .columns-1 .row {
     margin: 0px;
 }
