@@ -8,19 +8,19 @@
 				<div class="follow_us">
 					<ul>
 						<li>Follow us</li>
-						<li><a href="#0"><i class="ti-facebook"></i></a></li>
-						<li><a href="#0"><i class="ti-twitter-alt"></i></a></li>
-						<li><a href="#0"><i class="ti-google"></i></a></li>
-						<li><a href="#0"><i class="ti-pinterest"></i></a></li>
-						<li><a href="#0"><i class="ti-instagram"></i></a></li>
+						<li><a href="https://www.facebook.com/IonTachAcademy/"><i class="ti-facebook"></i></a></li>
+						<li><a href="javaScript:void(0);"><i class="ti-twitter-alt"></i></a></li>
+						<li><a href="javaScript:void(0);"><i class="ti-google"></i></a></li>
+						<li><a href="javaScript:void(0);"><i class="ti-youtube"></i></a></li>
+						<li><a href="javaScript:void(0);"><i class="ti-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6 ml-lg-auto">
 				<h5>Useful links</h5>
 				<@liferay.navigation_menu
-					default_preferences=freeMarkerPortletPreferences.getPreferences(mainfooterNavigation)
-					instance_id="useFulllinks"
+					default_preferences=freeMarkerPortletPreferences.getPreferences(useFulllinks)
+					instance_id="useFull_links"
 				/>
 				<ul class="links">
 					<li><a href="#0">Admission</a></li>
@@ -34,7 +34,7 @@
 			<div class="col-lg-3 col-md-6">
 				<h5>Contact with Us</h5>
 				<ul class="contacts">
-					<li><a href="tel://61280932400"><i class="ti-mobile"></i>1800 425 0573</a></li>
+					<li><a href="tel://1800 425 0573"><i class="ti-mobile"></i>1800 425 0573</a></li>
 					<li><a href="mailto:info@iontachacademy.com"><i class="ti-email"></i> info@iontachacademy.com</a></li>
 				</ul>
 			</div>
@@ -44,8 +44,8 @@
 		<div class="row">
 			<div class="col-md-8">
 				<@liferay.navigation_menu
-					default_preferences=freeMarkerPortletPreferences.getPreferences(mainfooterNavigation)
-					instance_id="additionalLinks"
+					default_preferences=freeMarkerPortletPreferences.getPreferences(additionalLinks)
+					instance_id="additional_Links"
 				/>
 				<ul id="additional_links">
 					<li><a href="#0">Terms and conditions</a></li>

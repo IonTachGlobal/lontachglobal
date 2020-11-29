@@ -7,10 +7,10 @@ body{
 	color:$link-color;
 }
 
-heading#banner {
+header#banner {
 	margin-bottom: 10px;
 	
-	.custom-logo img {
+	.logo img {
 		width: 140px;
 	    height: auto;
 	}
@@ -38,6 +38,10 @@ heading#banner {
 
 .NotOmniAdmin .portlet-header {
 	display:none;
+}
+
+.portlet-content, .portlet-minimized .portlet-content-container {
+    padding: 0px;
 }
 
 .control-menu {
