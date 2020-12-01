@@ -47,7 +47,7 @@ header#banner {
 .control-menu {
 	z-index: 99999;
 }
-.no-gutters .columns-1 .row {
+#content .row .col-md-12.portlet-column portlet-column-only {
     margin: 0px;
 }
 
