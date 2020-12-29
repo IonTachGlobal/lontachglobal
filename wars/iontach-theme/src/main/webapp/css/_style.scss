@@ -1,5 +1,5 @@
 
-
+/*
 [Table of contents] 
 
 1. SITE STRUCTURE and TYPOGRAPHY
@@ -31,7 +31,7 @@
 - 3.6 Block reveal
 - 3.7 Search modal
 - 3.8 Cookie bar
-
+*/
 /*============================================================================================*/
 /* 1.  SITE STRUCTURE and TYPOGRAPHY */
 /*============================================================================================*/
@@ -970,7 +970,6 @@ footer ul.links li a:after {
   content: "\24";
   position: absolute;
   margin-left: 5px;
-  top: 1px;
   opacity: 0;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -5507,12 +5506,12 @@ ul.bullets li:before {
 
 .margin_120_95 {
   padding-top: 120px;
-  padding-bottom: 95px;
+  padding-bottom:15px;
 }
 @media (max-width: 991px) {
   .margin_120_95 {
     padding-top: 60px;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
   }
 }
 @media (max-width: 575px) {

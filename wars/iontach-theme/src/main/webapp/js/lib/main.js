@@ -2,7 +2,7 @@
 
 	"use strict";
 	
-	$(window).on('load', function () {
+	/*$(window).on('load', function () {
 		$('[data-loader="circle-side"]').fadeOut(); // will first fade out the loading animation
 		$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 		$('body').delay(350);
@@ -10,7 +10,7 @@
 		$('.hero_single, #hero_in').addClass('start_bg_zoom');
 		$(window).scroll();
 	});
-	
+	*/
 	// Sticky nav
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 1) {
@@ -94,6 +94,9 @@
 	
 	/*  video popups */
 	$('.video').magnificPopup({type:'iframe'});	/* video modal*/
+	$( "#footer .useful_links .portlet-navigation ul" ).addClass( "links" );
+	$( "#footer .additional_links .portlet-navigation ul" ).attr('id', 'additional_links');
+	
 	
 	/*  Image popups */
 	$('.magnific-gallery').each(function () {

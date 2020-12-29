@@ -7,4 +7,6 @@
 
 <#if adminpermission == false>
 	<#assign css_class = css_class + " NotOmniAdmin" />
+<#else>
+	<#assign css_class = css_class + " OmniAdmin" />
 </#if>

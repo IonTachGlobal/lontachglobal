@@ -4,12 +4,10 @@
 @import "theme_variables_custom";
 
 body{
-	color:$link-color;
+	background:$link-color;
 }
 
-header#banner {
-	margin-bottom: 10px;
-	
+header#banner {	
 	.logo img {
 		width: 140px;
 	    height: auto;
@@ -40,21 +38,70 @@ header#banner {
 	display:none;
 }
 
+.OmniAdmin {
+	header#banner {
+		top: 40px;
+	}
+	.has-control-menu.open {
+		left: 320px;
+	}
+}
+.portlet {
+	margin-bottom: 0px;
+}
 .portlet-content, .portlet-minimized .portlet-content-container, .portlet-content-editable {
     padding: 0px;
+	border: 0px;
 }
 
 .control-menu {
 	z-index: 99999;
 }
-#content .row .col-md-12.portlet-column portlet-column-only {
+#content .row .col-md-12.portlet-column, #content .row {
     margin: 0px;
+    padding:0px;
+}
+
+.portlet-login {
+	max-width: 35%;
+    margin: 70px auto;
+    
+	.portlet-icon-back {
+		display:none;
+	}
 }
 
 #footer {
 	background-color: $footer-bg;
-	
+	.custom-logo img {
+		max-height: 150px;
+	    width: auto;
+	}
+	hr {
+		margin: 10px 0 10px 0;
+	}
 	a {
 		color:$link-color;
+		
+		.text-truncate {
+		    display: inline;
+		}
+	}
+	.additional_links a, .links a {
+		opacity: 0.5;
+	}
+	
+	.additional_links a:hover, .links a:hover {
+		opacity: 1;
+	}
+	.links a:hover {
+		padding-right: 25px;
+	}
+	ul#additional_links li a {
+		display: inline-block;
+		padding: 0px;
+	}
+	ul#additional_links li:after {
+		top: -5px;
 	}
 }
