@@ -7,6 +7,11 @@
 	</div>
 	<ul id="top_menu">
 		<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+		<#if !is_signed_in>
+			<li>
+				<a data-redirect="${is_login_redirect_required?string}" class="login" href="/login" id="sign-in" class="btn_1 rounded" rel="nofollow">${sign_in_text}</a>
+			</li>
+		</#if>
 		<li>
 			<#if show_header_search>
 				<div role="search">
@@ -16,7 +21,7 @@
 		</li>
 		<#if !is_signed_in>
 			<li>
-				<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" class="btn_1 rounded" rel="nofollow">Admission ${sign_in_text}</a>
+				<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" class="btn_1 rounded" rel="nofollow">Admission</a>
 			</li>
 		</#if>
 	</ul>

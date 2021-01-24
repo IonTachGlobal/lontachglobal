@@ -54,9 +54,6 @@ header#banner {
 	border: 0px;
 }
 
-.control-menu {
-	z-index: 99999;
-}
 #content .row .col-md-12.portlet-column, #content .row {
     margin: 0px;
     padding:0px;
@@ -64,12 +61,23 @@ header#banner {
 
 .portlet-login {
 	max-width: 35%;
-    margin: 70px auto;
+	margin: 40px auto;
+	background: #FFF;
+	padding: 10px;
+	border-radius: 10px;
     
 	.portlet-icon-back {
 		display:none;
 	}
 }
+
+.signed-in .mm-slideout.header, .header {
+	z-index:initial;
+}
+
+.page-maximized .mm-slideout {
+	margin-top: 150px;
+} 
 
 #footer {
 	background-color: $footer-bg;
