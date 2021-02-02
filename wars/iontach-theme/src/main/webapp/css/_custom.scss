@@ -34,8 +34,14 @@ header#banner {
 
 }
 
-.NotOmniAdmin .portlet-header {
-	display:none;
+.NotOmniAdmin {
+	.portlet-header, .portlet-asset-publisher .metadata-author, .asset-entries-group-label {
+		display:none;
+	}
+}
+
+.margin_60_0 {
+    padding-top: 60px;
 }
 
 .OmniAdmin {
@@ -44,6 +50,12 @@ header#banner {
 	}
 	.has-control-menu.open {
 		left: 320px;
+	}
+	section#content {
+		margin-top: 82px;
+	}
+	.mm-slideout.header, .header {
+		z-index:initial;
 	}
 }
 .portlet {
@@ -54,13 +66,17 @@ header#banner {
 	border: 0px;
 }
 
+.animated .block-reveal img {
+	height: 200px;
+	width: 100%;
+}
+
 #content .row .col-md-12.portlet-column, #content .row {
     margin: 0px;
     padding:0px;
 }
 
 .portlet-login {
-	max-width: 35%;
 	margin: 40px auto;
 	background: #FFF;
 	padding: 10px;
@@ -71,13 +87,52 @@ header#banner {
 	}
 }
 
-.signed-in .mm-slideout.header, .header {
-	z-index:initial;
+@media (min-width: 991px) {
+	.portlet-login {
+		max-width: 35%;
+	}
 }
 
-.page-maximized .mm-slideout {
+.page-maximized #page.mm-slideout {
 	margin-top: 150px;
-} 
+}
+
+.search-overlay-close {
+	z-index: 10000;
+	position: fixed;
+}
+
+.closebt {
+	position: fixed;
+}
+
+.search-overlay-menu .portlet {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.search-overlay-menu form input {
+	height: 70px;
+}
+
+.Search div#page {
+    margin: 120px 0px 0px;
+}
+
+.Search div#page #content {
+    width: 80%;
+    margin: 10px auto;
+}
+
+#portlet_password-reminder, #portlet_terms-of-use, #portlet_new-password {
+	margin-top:120px;
+}
+
+ul#top_menu li a.btn_1.dashboard {
+    background-color: #c3000c;
+    color:#FFF;
+}
 
 #footer {
 	background-color: $footer-bg;
@@ -112,4 +167,12 @@ header#banner {
 	ul#additional_links li:after {
 		top: -5px;
 	}
+}
+
+/* ----- My site css ----- */
+.list-unstyled li:last-child {
+    display: block;
+}
+.list-unstyled li {
+    display: none;
 }

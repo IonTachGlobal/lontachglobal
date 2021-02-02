@@ -125,7 +125,7 @@
 	// Accordion
 	function toggleChevron(e) {
 		$(e.target)
-			.prev('.card-header')
+			.prev('.card')
 			.find("i.indicator")
 			.toggleClass('ti-minus ti-plus');
 	}
@@ -140,7 +140,7 @@
 	$('.accordion_2').on('hidden.bs.collapse shown.bs.collapse', toggleChevron);
 		function toggleIcon(e) {
         $(e.target)
-            .prev('.panel-heading')
+            .prev('.card-header')
             .find(".indicator")
             .toggleClass('ti-minus ti-plus');
     }

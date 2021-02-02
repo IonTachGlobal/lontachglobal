@@ -2775,6 +2775,15 @@ a.box_feat h3 {
   content: "\e089";
   color: #fff;
 }
+.box_grid a.active.wish_bt:after {
+    content: "\e089";
+    color: #fff;
+}
+
+.box_grid a.active_bt:hover:after {
+  content: "\e030";
+}
+
 .box_grid figure {
   margin-bottom: 0;
   overflow: hidden;
@@ -2932,7 +2941,6 @@ a.box_feat h3 {
   right: 15px;
   top: 15px;
   z-index: 1;
-  background-color: black;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 9px 10px;
   display: inline-block;
@@ -2943,14 +2951,25 @@ a.box_feat h3 {
   -ms-border-radius: 3px;
   border-radius: 3px;
 }
+
 .box_list a.wish_bt:after {
   font-family: 'ElegantIcons';
   content: "\e030";
 }
 .box_list a.wish_bt:hover:after {
   content: "\e089";
-  color: #92278f;
+  color: #FFF;
 }
+
+.box_list a.active.wish_bt:after {
+    content: "\e089";
+    color: #FFF;
+}
+
+.box_list a.active_bt:hover:after {
+  content: "\e030";
+}
+
 .box_list figure {
   margin-bottom: 0;
   overflow: hidden;

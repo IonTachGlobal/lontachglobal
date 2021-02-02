@@ -51,7 +51,6 @@ combineJs {
     def javascriptlib = javascriptSourceParent+"/lib"
     
     source = [
-    		  javascriptlib+"/jquery-2.2.4.min.js",
     		  javascriptlib+"/common_scripts.js",
     		  javascriptlib+"/main.js",
     		 ]
